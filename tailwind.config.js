@@ -33,8 +33,8 @@ module.exports = {
       full: "9999px",
     },
     colors: {
-      primary: "#C93DE0",
-      secondary: "#252A31",
+      primary: "#FF94FD",
+      secondary: "#74ABFF",
       black: "#0C0C0C",
       white: "#F8F8F8",
 
