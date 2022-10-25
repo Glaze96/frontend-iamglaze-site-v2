@@ -15,7 +15,7 @@ const Button = ({ label, callback, url, newtab }: ButtonProps) => {
   }
 
   const styling =
-    "px-2 py-1 rounded-sm hover:opacity-40 font-bold transition-all bg-primary";
+    "px-2 py-2 rounded-md hover:opacity-40 font-bold transition-all w-full border-primary border-4 bg-primaryDark w-80";
 
   return (
     <>
