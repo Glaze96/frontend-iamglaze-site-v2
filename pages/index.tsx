@@ -1,14 +1,14 @@
-import type { NextPage } from "next";
-import Button from "../components/Misc/button";
+import { NextPage } from "next";
+import Image from "next/image"
 
 const Home: NextPage = () => {
-  const clickedButton = () => {
-    console.log("clicked");
-  };
-
   return (
     <div>
-      <main></main>
+      <main>
+
+        <Image src="/Logo/RECT LOGO_svg.svg"></Image>
+
+      </main>
 
       <footer></footer>
     </div>
