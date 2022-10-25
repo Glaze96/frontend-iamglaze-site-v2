@@ -8,11 +8,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <main>
-        <h1>test</h1>
-        <Button label="OUTBOUND" url="https://iamglaze.me" newtab/>
-        <Button label="BUTTON" callback={clickedButton}/>
-      </main>
+      <main></main>
 
       <footer></footer>
     </div>
