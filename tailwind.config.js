@@ -36,7 +36,7 @@ module.exports = {
       primary: "#FF94FD",
       primaryDark: "#362136",
       secondary: "#74ABFF",
-      black: "#0C0C0C",
+      black: "#131414",
       white: "#F8F8F8",
 
       transparent: "hsl(0,0%,0%,0)",
