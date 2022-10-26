@@ -41,7 +41,11 @@ module.exports = {
 
       transparent: "hsl(0,0%,0%,0)",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'art': "url('../public/Resources/2d.jpg')",
+      },
+    },
     fontSize: {
       base: ["1.25rem", { lineHeight: "1.5" }],
       lg: ["1.5rem", { lineHeight: "1.5" }],
