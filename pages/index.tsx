@@ -3,6 +3,7 @@ import { NextPage } from "next";
 import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import Button from "../components/Misc/button";
+import ImageButton from "../components/ImageButton";
 
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -41,25 +42,29 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="h-screen flex flex-row">
-              <div className="w-1/2 overflow-hidden">
-                <div className="h-full bg-[url('../public/Resources/2d.jpg')] bg-cover opacity-80 hover:opacity-100 hover:scale-110 transition-all">
-                  <div className="w-full h-full grid place-content-center">
-                    <h3 className="text-xl select-none">Instagram</h3>
-                  </div>
-                </div>
+            <div className="flex flex-col h-full">
+              <div
+                className="absolute h-full overflow-y-auto w-full"
+                style={{
+                  clipPath: "polygon(0 0, 35% 0, 65% 100%, 0 100%)",
+                  zIndex: 1,
+                }}
+              >
+                <ImageButton
+                  label="Instagram"
+                  imageUrl="Resources/2d.jpg"
+                  linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
+                />
               </div>
-
-              <div className="w-1/2 overflow-hidden">
-                <div className="h-full bg-[url('../public/Resources/3d.jpg')] bg-cover opacity-80 hover:opacity-100 hover:scale-110 transition-all">
-                  <div className="w-full h-full grid place-content-center">
-                    <h3 className="text-xl select-none">Art Station</h3>
-                  </div>
-                </div>
+              <div className="absolute h-full overflow-y-auto w-full">
+                <ImageButton
+                  label="ArtStation"
+                  imageUrl="Resources/3d.jpg"
+                  linkUrl="https://www.artstation.com/glaze"
+                />
               </div>
             </div>
           </div>
-
           {/* <div ref={myRef} className="flex flex-col h-screen">
             <div className="absolute w-full flex place-items-center p-12">
               <h2 className="flex place-content-center text-xl w-80">MY ART</h2>
