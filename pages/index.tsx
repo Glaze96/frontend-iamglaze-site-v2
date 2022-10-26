@@ -42,11 +42,11 @@ const Home: NextPage = () => {
               </div>
             </div>
 
-            <div className="flex flex-col h-full">
+            <div className="flex flex-row h-1/2">
               <div
-                className="absolute h-full overflow-y-auto w-full"
+                className="h-full overflow-y-auto w-full"
                 style={{
-                  clipPath: "polygon(0 0, 35% 0, 65% 100%, 0 100%)",
+                  clipPath: "polygon(0 0, 25% 0, 75% 100%, 0 100%)",
                   zIndex: 1,
                 }}
               >
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
                   linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
                 />
               </div>
-              <div className="absolute h-full overflow-y-auto w-full">
+              <div className="absolute h-1/2 overflow-y-auto w-3/4">
                 <ImageButton
                   label="ArtStation"
                   imageUrl="Resources/3d.jpg"
