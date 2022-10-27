@@ -13,7 +13,7 @@ const ImageButton = ({ label, imageUrl, linkUrl }: ImageButtonProps) => {
 
     return (
     <button className="w-full h-full overflow-hidden" onClick={() => onClickHandler()}>
-      <img src={imageUrl} className="brightnexx-90 hover:brightness-100 hover:scale-110 transition-all w-full h-full overflow-hidden" />
+      <img src={imageUrl} className="brightness-90 hover:brightness-100 hover:scale-110 transition-all w-full h-full overflow-hidden" />
       {/* <section
         className={
           "h-full bg-[url('../public/" +
