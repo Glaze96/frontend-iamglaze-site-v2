@@ -8,8 +8,9 @@ import ImageButton from "../components/ImageButton";
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
 const Home: NextPage = () => {
-  const myRef = useRef(null);
-  const executeScroll = () => scrollToRef(myRef);
+  const artSectionRef = useRef(null);
+  const musicSectionRef = useRef(null);
+  const executeScroll = (sectionRef : any) => scrollToRef(sectionRef);
 
   return (
     <div>
@@ -26,15 +27,15 @@ const Home: NextPage = () => {
             <div className="grid grid-rows-2">
               <h2 className="m-auto text-xl text-center p-6">CHECK OUT: </h2>
               <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row">
-                <Button label="MY ART" callback={() => executeScroll()} />
-                <Button label="MY MUSIC" />
+                <Button label="MY ART" callback={() => executeScroll(artSectionRef)} />
+                <Button label="MY MUSIC" callback={() => executeScroll(musicSectionRef)}/>
                 <Button label="ME!" />
               </div>
             </div>
           </div>
         </Layout>
         <Layout>
-          <div ref={myRef} className="h-screen flex flex-col">
+          <div ref={artSectionRef} className="h-screen flex flex-col">
             <div className="w-full flex place-items-center p-10">
               <h2 className="flex place-content-center text-xl w-80">MY ART</h2>
               <div className="pr-12 w-full">
@@ -75,6 +76,16 @@ const Home: NextPage = () => {
             </div>
             <div className="h-screen bg-[url('../public/Resources/2d.jpg')] bg-cover"></div>
           </div> */}
+        </Layout>
+        <Layout>
+          <div ref={musicSectionRef} className="h-screen flex flex-col">
+            <div className="w-full flex place-items-center p-10">
+              <h2 className="flex place-content-center text-xl w-80">MY MUSIC</h2>
+              <div className="pr-12 w-full">
+                <div className="flex-grow border-4 border-spacing-x-80"></div>
+              </div>
+            </div>
+          </div>
         </Layout>
       </main>
 
