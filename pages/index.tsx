@@ -42,14 +42,10 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="flex flex-row h-3/4">
-
-            <div className="absolute select-none" style={{zIndex: 2}}>
-              <h3>Instagram</h3>
-            </div>
               <div
                 className="h-full w-full"
                 style={{
-                  clipPath: "polygon(0 0, 25% 0, 75% 100%, 0 100%)",
+                  clipPath: "polygon(0 0, 75% 0, 25% 100%, 0 100%)",
                   zIndex: 1,
                 }}
               >
@@ -57,6 +53,7 @@ const Home: NextPage = () => {
                   label="Instagram"
                   imageUrl="Resources/2d.jpg"
                   linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
+                  textPos="top"
                 />
               </div>
               <div className="absolute h-3/4 w-3/4">
@@ -64,6 +61,7 @@ const Home: NextPage = () => {
                   label="ArtStation"
                   imageUrl="Resources/3d.jpg"
                   linkUrl="https://www.artstation.com/glaze"
+                  textPos="bottom"
                 />
               </div>
             </div>
