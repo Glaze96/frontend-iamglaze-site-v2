@@ -5,11 +5,14 @@ import Layout from "../components/Layout/Layout";
 import Button from "../components/Misc/button";
 import ImageButton from "../components/ImageButton";
 
+import glazePicture from "../public/Resources/pfp.jpg";
+
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
 const Home: NextPage = () => {
   const artSectionRef = useRef(null);
   const musicSectionRef = useRef(null);
+  const aboutSectionRef = useRef(null);
   const executeScroll = (sectionRef: any) => scrollToRef(sectionRef);
 
   return (
@@ -25,7 +28,9 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="grid grid-rows-2">
-              <h2 className="m-auto text-xl text-center p-6 font-bold">CHECK OUT: </h2>
+              <h2 className="m-auto text-xl text-center p-6 font-bold">
+                CHECK OUT:{" "}
+              </h2>
               <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row">
                 <div className="w-80">
                   <Button
@@ -40,7 +45,10 @@ const Home: NextPage = () => {
                   />
                 </div>
                 <div className="w-80">
-                  <Button label="ME!" />
+                  <Button
+                    label="GLAZE"
+                    callback={() => executeScroll(aboutSectionRef)}
+                  />
                 </div>
               </div>
             </div>
@@ -92,7 +100,7 @@ const Home: NextPage = () => {
                 <div className="flex-grow border-4 border-spacing-x-80"></div>
               </div>
             </div>
-            <div className="flex flex-row py-20">
+            <div className="flex flex-row py-20 mx-auto w-2/3">
               <div className="w-1/2">
                 <h2 className="text-xl">I Am Glaze</h2>
                 <p className="text-base">
@@ -136,6 +144,34 @@ const Home: NextPage = () => {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </Layout>
+        <Layout>
+          <div ref={aboutSectionRef} className="h-screen flex flex-col">
+            <div className="w-full flex place-items-center p-10">
+              <h2 className="flex place-content-center text-xl w-80 font-bold">
+                ABOUT GLAZE
+              </h2>
+              <div className="pr-12 w-full">
+                <div className="flex-grow border-4 border-spacing-x-80"></div>
+              </div>
+            </div>
+            <div className="flex flex-row gap-20 py-20 mx-auto w-2/3">
+              <p className="text-base">
+                Hi, I Am Glaze. I love making stuff. Creating art has always
+                been a passion of mine. I started my endeavors in digital art
+                and after that I fell in love with more techincal creative
+                fields like programming and 3d modelling. Also, I adore music,
+                both listening to it and creating it. Here's some programs I
+                work with: Blender, FL Studio, Photoshop, Adobe Illustrator and
+                Figma. Other than those, I generally have an easy time picking
+                up and learning new software. I have a wonderful girlfriend, a
+                couple of awesome dogs and an amazing family.
+              </p>
+              <div>
+                <Image src={glazePicture} />
               </div>
             </div>
           </div>
