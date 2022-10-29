@@ -13,6 +13,7 @@ const Home: NextPage = () => {
   const artSectionRef = useRef(null);
   const musicSectionRef = useRef(null);
   const aboutSectionRef = useRef(null);
+  const programmingSectionRef = useRef(null);
   const executeScroll = (sectionRef: any) => scrollToRef(sectionRef);
 
   return (
@@ -42,6 +43,12 @@ const Home: NextPage = () => {
                   <Button
                     label="MY MUSIC"
                     callback={() => executeScroll(musicSectionRef)}
+                  />
+                </div>
+                <div className="w-80">
+                  <Button
+                    label="MY PROGRAMMING"
+                    callback={() => executeScroll(programmingSectionRef)}
                   />
                 </div>
                 <div className="w-80">
@@ -144,6 +151,18 @@ const Home: NextPage = () => {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </Layout>
+        <Layout>
+          <div ref={programmingSectionRef} className="h-screen flex flex-col">
+            <div className="w-full flex place-items-center p-10">
+              <h2 className="flex place-content-center text-xl w-80 font-bold">
+                MY PROGRAMMING
+              </h2>
+              <div className="pr-12 w-full">
+                <div className="flex-grow border-4 border-spacing-x-80"></div>
               </div>
             </div>
           </div>
