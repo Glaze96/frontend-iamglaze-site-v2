@@ -25,7 +25,7 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="grid grid-rows-2">
-              <h2 className="m-auto text-xl text-center p-6">CHECK OUT: </h2>
+              <h2 className="m-auto text-xl text-center p-6 font-bold">CHECK OUT: </h2>
               <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row">
                 <div className="w-80">
                   <Button
@@ -81,15 +81,6 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          {/* <div ref={myRef} className="flex flex-col h-screen">
-            <div className="absolute w-full flex place-items-center p-12">
-              <h2 className="flex place-content-center text-xl w-80">MY ART</h2>
-              <div className="pr-12 w-full">
-                <div className="flex-grow border-4 border-spacing-x-80"></div>
-              </div>
-            </div>
-            <div className="h-screen bg-[url('../public/Resources/2d.jpg')] bg-cover"></div>
-          </div> */}
         </Layout>
         <Layout>
           <div ref={musicSectionRef} className="h-screen flex flex-col">
@@ -132,15 +123,15 @@ const Home: NextPage = () => {
                 <div className="flex flex-row gap-6 py-6">
                   <div className="w-40">
                     <Button
-                      label="Spotify"
-                      url="https://open.spotify.com/artist/6gAx05BlEJQcHp7mMVi3eM"
+                      label="Website"
+                      url="http://www.innermixmusic.com/"
                       newtab
                     />
                   </div>
                   <div className="w-40">
                     <Button
                       label="Youtube"
-                      url="https://www.youtube.com/channel/UCXh8mqVGRwUhQvT5ZZG-w0g"
+                      url="https://open.spotify.com/artist/6gAx05BlEJQcHp7mMVi3eM"
                       newtab
                     />
                   </div>
