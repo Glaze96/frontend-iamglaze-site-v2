@@ -92,7 +92,7 @@ const Home: NextPage = () => {
                 <div className="flex-grow border-4 border-spacing-x-80"></div>
               </div>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row py-20">
               <div className="w-1/2">
                 <h2 className="text-xl">I Am Glaze</h2>
                 <p className="text-base">
