@@ -36,41 +36,43 @@ const Home: NextPage = () => {
       <main className="bg-black">
         <Layout>
           <div className="h-screen bg-black">
-            <div className="flex py-14 md:py-28">
-              <img
-                className="m-auto w-screen md:w-1/3"
-                src="/Logo/RECT LOGO_svg.svg"
-                alt="logo"
-              />
-            </div>
-            <div className="grid grid-rows-2">
-              <h2 className="m-auto text-xl text-center p-6 font-bold">
-                CHECK OUT:{" "}
-              </h2>
-              <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row">
-                <div className="w-80">
-                  <Button
-                    label="MY ART"
-                    callback={() => executeScroll(artSectionRef)}
-                  />
-                </div>
-                <div className="w-80">
-                  <Button
-                    label="MY MUSIC"
-                    callback={() => executeScroll(musicSectionRef)}
-                  />
-                </div>
-                <div className="w-80">
-                  <Button
-                    label="MY PROGRAMMING"
-                    callback={() => executeScroll(programmingSectionRef)}
-                  />
-                </div>
-                <div className="w-80">
-                  <Button
-                    label="GLAZE"
-                    callback={() => executeScroll(aboutSectionRef)}
-                  />
+            <div className="flex items-center flex-col py-14 md:py-28 h-full">
+              <div className="relative w-full h-full md:w-1/2 md:h-1/2">
+                <Image
+                  src="/Logo/RECT LOGO_svg.svg"
+                  layout="fill"
+                  alt="logo"
+                />
+              </div>
+              <div className="grid grid-rows-2">
+                <h2 className="m-auto text-xl text-center p-6 font-bold">
+                  CHECK OUT:{" "}
+                </h2>
+                <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row">
+                  <div className="w-80">
+                    <Button
+                      label="MY ART"
+                      callback={() => executeScroll(artSectionRef)}
+                    />
+                  </div>
+                  <div className="w-80">
+                    <Button
+                      label="MY MUSIC"
+                      callback={() => executeScroll(musicSectionRef)}
+                    />
+                  </div>
+                  <div className="w-80">
+                    <Button
+                      label="MY PROGRAMMING"
+                      callback={() => executeScroll(programmingSectionRef)}
+                    />
+                  </div>
+                  <div className="w-80">
+                    <Button
+                      label="GLAZE"
+                      callback={() => executeScroll(aboutSectionRef)}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
