@@ -4,8 +4,23 @@ import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import Button from "../components/Misc/button";
 import ImageButton from "../components/ImageButton";
+import Icon from "../components/Misc/Icon";
 
 import glazePicture from "../public/Resources/pfp.jpg";
+
+import {
+  SiCplusplus,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiStyledcomponents,
+  SiUnity,
+  SiCsharp,
+  SiPython,
+  SiGithub,
+  SiFigma,
+} from "react-icons/si";
 
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -133,7 +148,7 @@ const Home: NextPage = () => {
               <div className="w-1/2">
                 <h2 className="text-xl">Inner Mix</h2>
                 <p className="text-base">
-                  ‘Inner Mix’ is a music group I’m in, as a role of the producer
+                  ‘Inner Mix’ is a music group. I am the producer.
                 </p>
                 <div className="flex flex-row gap-6 py-6">
                   <div className="w-40">
@@ -146,7 +161,7 @@ const Home: NextPage = () => {
                   <div className="w-40">
                     <Button
                       label="Youtube"
-                      url="https://open.spotify.com/artist/6gAx05BlEJQcHp7mMVi3eM"
+                      url="https://www.youtube.com/channel/UCtbHyCDGZA6pmNVEKWjORdg"
                       newtab
                     />
                   </div>
@@ -163,6 +178,43 @@ const Home: NextPage = () => {
               </h2>
               <div className="pr-12 w-full">
                 <div className="flex-grow border-4 border-spacing-x-80"></div>
+              </div>
+            </div>
+            <div className="flex flex-row h-full py-20">
+              <div className="w-full h-full">
+                <h2 className="text-xl">Technologies</h2>
+                <div>
+                  <h2 className="text-lg p-5">Web</h2>
+                  <div className="flex flex-row w-fit gap-5 p-5">
+                    <Icon icon={<SiReact />} />
+                    <Icon icon={<SiNextdotjs />} />
+                    <Icon icon={<SiTypescript />} />
+                    <Icon icon={<SiStyledcomponents />} />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-lg p-5">Languages</h2>
+                  <div className="flex flex-row w-fit gap-5 p-5">
+                    <Icon icon={<SiJavascript />} />
+                    <Icon icon={<SiCplusplus />} />
+                    <Icon icon={<SiCsharp />} />
+                    <Icon icon={<SiPython />} />
+                  </div>
+                </div>
+                <div>
+                  <h2 className="text-lg p-5">Other</h2>
+                  <div className="flex flex-row w-fit gap-5 p-5">
+                    <Icon icon={<SiUnity />} />
+                    <Icon icon={<SiGithub />} />
+                    <Icon icon={<SiFigma />} />
+                  </div>
+                </div>
+              </div>
+              <div className="w-full">
+                <h2 className="text-xl p-5">Links</h2>
+                <div className="w-60 p-5">
+                  <Button label="Github" url="https://github.com/Glaze96/" />
+                </div>
               </div>
             </div>
           </div>
