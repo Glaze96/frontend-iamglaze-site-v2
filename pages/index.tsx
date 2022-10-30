@@ -10,6 +10,8 @@ import SectionDivider from "../components/Layout/SectionDivider";
 
 import glazePicture from "../public/Resources/pfp.jpg";
 
+import { HiOutlineExternalLink } from "react-icons/hi"
+
 import {
   SiCplusplus,
   SiJavascript,
@@ -132,10 +134,12 @@ const Home: NextPage = () => {
               <Button.Link
                 label="Instagram"
                 url="https://www.instagram.com/i_am_the_real_glaze/"
+                icon={<HiOutlineExternalLink />}
               />
               <Button.Link
                 label="Art Station"
                 url="https://www.artstation.com/glaze"
+                icon={<HiOutlineExternalLink />}
               />
             </div>
           </div>
@@ -143,7 +147,6 @@ const Home: NextPage = () => {
         <Layout>
           <div ref={musicSectionRef} className="h-screen flex flex-col">
             <SectionDivider label="MUSIC" />
-
             <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
               <div className="md:w-1/2">
                 <h2 className="text-lg w-full md:text-xl">I Am Glaze</h2>
@@ -151,12 +154,14 @@ const Home: NextPage = () => {
                 <div className="flex flex-col md:flex-row gap-6 py-6">
                   <div className="w-40">
                     <Button.Link
+                      icon={<HiOutlineExternalLink />}
                       label="Spotify"
                       url="https://open.spotify.com/artist/6gAx05BlEJQcHp7mMVi3eM"
                     />
                   </div>
                   <div className="w-40">
                     <Button.Link
+                      icon={<HiOutlineExternalLink />}
                       label="Youtube"
                       url="https://www.youtube.com/channel/UCXh8mqVGRwUhQvT5ZZG-w0g"
                     />
@@ -171,12 +176,14 @@ const Home: NextPage = () => {
                 <div className="flex flex-col md:flex-row gap-6 py-6">
                   <div className="w-40">
                     <Button.Link
+                      icon={<HiOutlineExternalLink />}
                       label="Website"
                       url="http://www.innermixmusic.com/"
                     />
                   </div>
                   <div className="w-40">
                     <Button.Link
+                      icon={<HiOutlineExternalLink />}
                       label="Youtube"
                       url="https://www.youtube.com/channel/UCtbHyCDGZA6pmNVEKWjORdg"
                     />
@@ -195,34 +202,34 @@ const Home: NextPage = () => {
                 <div>
                   <h3 className="text-lg p-5">Web</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-                    <Icon icon={<SiReact />} />
-                    <Icon icon={<SiNextdotjs />} />
-                    <Icon icon={<SiTypescript />} />
-                    <Icon icon={<SiStyledcomponents />} />
+                    <Icon icon={<SiReact />} size="text-xl" />
+                    <Icon icon={<SiNextdotjs />} size="text-xl"/>
+                    <Icon icon={<SiTypescript />} size="text-xl"/>
+                    <Icon icon={<SiStyledcomponents />} size="text-xl"/>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg p-5">Languages</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-                    <Icon icon={<SiJavascript />} />
-                    <Icon icon={<SiCplusplus />} />
-                    <Icon icon={<SiCsharp />} />
-                    <Icon icon={<SiPython />} />
+                    <Icon icon={<SiJavascript />} size="text-xl"/>
+                    <Icon icon={<SiCplusplus />} size="text-xl"/>
+                    <Icon icon={<SiCsharp />} size="text-xl"/>
+                    <Icon icon={<SiPython />} size="text-xl"/>
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg p-5">Other</h3>
                   <div className="flex flex-row w-fit gap-5 md:p-5">
-                    <Icon icon={<SiUnity />} />
-                    <Icon icon={<SiGithub />} />
-                    <Icon icon={<SiFigma />} />
+                    <Icon icon={<SiUnity />} size="text-xl"/>
+                    <Icon icon={<SiGithub />} size="text-xl"/>
+                    <Icon icon={<SiFigma />} size="text-xl"/>
                   </div>
                 </div>
               </div>
               <div className="w-full">
                 <h2 className="text-md md:text-xl">Links</h2>
                 <div className="w-60 p-5">
-                  <Button.Link label="Github" url="https://github.com/Glaze96/" />
+                  <Button.Link label="Github" url="https://github.com/Glaze96/" icon={<HiOutlineExternalLink />} />
                 </div>
               </div>
             </div>

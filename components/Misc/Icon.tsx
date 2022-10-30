@@ -1,13 +1,14 @@
 
 
 interface IconProps {
-    icon: JSX.Element
+    icon: JSX.Element;
+    size: string;
 }
 
 
-const Icon = ({icon}: IconProps) => {
+const Icon = ({icon, size}: IconProps) => {
     return <div className="w-full h-full">
-        <figure className="text-xl">{icon}</figure>
+        <figure className={size}>{icon}</figure>
     </div>
 }
 
