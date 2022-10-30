@@ -30,3 +30,35 @@ a {
     background: black;
   }
 }
+
+@font-face {
+  font-family: "Poppins";
+  src: url('../assets/Poppins/Poppins-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url('../assets/Poppins/Poppins-Bold.ttf');
+  font-weight: bold;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-weight: bold;
+}
+
+h2 {
+  font-family: "Poppins";
+  font-weight: normal;
+}
+
+h3 {
+  font-family: "Poppins";
+  font-weight: normal;
+}
+
+p {
+  font-family: "Poppins";
+  font-weight: normal;
+}

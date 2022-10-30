@@ -37,14 +37,18 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>I Am Glaze - Site</title>
-        <link rel="shortcut icon" href="/static/favicon.ico"/>
+        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
         <meta
           name="description"
           content="A website made by Glaze, about Glaze"
           key="desc"
         />
       </Head>
-      <main className="bg-black p-">
+      <main className="bg-black">
         <Layout>
           <div className="w-full h-screen">
             <div className="">
@@ -191,9 +195,9 @@ const Home: NextPage = () => {
             <SectionDivider label="PROGRAMMING" />
             <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
               <div className="w-full h-full">
-                <h2 className="text-md md:text-xl">Technologies</h2>
+                <h3 className="text-lg md:text-xl">Technologies</h3>
                 <div>
-                  <h2 className="text-lg p-5">Web</h2>
+                  <h3 className="text-lg p-5">Web</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
                     <Icon icon={<SiReact />} />
                     <Icon icon={<SiNextdotjs />} />
@@ -202,7 +206,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-lg p-5">Languages</h2>
+                  <h3 className="text-lg p-5">Languages</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
                     <Icon icon={<SiJavascript />} />
                     <Icon icon={<SiCplusplus />} />
@@ -211,7 +215,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-lg p-5">Other</h2>
+                  <h3 className="text-lg p-5">Other</h3>
                   <div className="flex flex-row w-fit gap-5 md:p-5">
                     <Icon icon={<SiUnity />} />
                     <Icon icon={<SiGithub />} />
@@ -245,7 +249,7 @@ const Home: NextPage = () => {
                 girlfriend, a couple of awesome dogs and an amazing family.
               </p>
               <div>
-                <Image src={glazePicture} alt="profile picture"/>
+                <Image src={glazePicture} alt="profile picture" />
               </div>
             </div>
           </div>
