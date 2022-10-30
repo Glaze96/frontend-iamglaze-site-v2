@@ -5,6 +5,7 @@ import Layout from "../components/Layout/Layout";
 import Button from "../components/Misc/button";
 import ImageButton from "../components/ImageButton";
 import Icon from "../components/Misc/Icon";
+import SectionDivider from "../components/Layout/SectionDivider";
 
 import glazePicture from "../public/Resources/pfp.jpg";
 
@@ -38,15 +39,11 @@ const Home: NextPage = () => {
           <div className="h-screen bg-black">
             <div className="flex items-center flex-col py-14 md:py-28 h-full">
               <div className="relative w-full h-full md:w-1/2 md:h-1/2">
-                <Image
-                  src="/Logo/RECT LOGO_svg.svg"
-                  layout="fill"
-                  alt="logo"
-                />
+                <Image src="/Logo/RECT LOGO_svg.svg" layout="fill" alt="logo" />
               </div>
-              <div className="grid grid-rows-2">
-                <h2 className="m-auto text-xl text-center p-6 font-bold">
-                  CHECK OUT:{" "}
+              <div className="flex flex-col">
+                <h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold">
+                  CHECK OUT:
                 </h2>
                 <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row">
                   <div className="w-80">
@@ -80,16 +77,8 @@ const Home: NextPage = () => {
         </Layout>
         <Layout>
           <div ref={artSectionRef} className="h-screen flex flex-col">
-            <div className="w-full flex place-items-center p-10">
-              <h2 className="flex place-content-center text-xl w-80 font-bold">
-                MY ART
-              </h2>
-              <div className="pr-12 w-full">
-                <div className="flex-grow border-4 border-spacing-x-80"></div>
-              </div>
-            </div>
-
-            <div className="h-full">
+            <SectionDivider label="ART" />
+            <div className="h-full hidden md:block">
               <div className="absolute w-3/4 h-3/4">
                 <ImageButton
                   label="Instagram"
@@ -111,25 +100,23 @@ const Home: NextPage = () => {
                 />
               </div>
             </div>
+            <div className="md:hidden flex flex-col gap-4 py-4">
+              <Button label="Instagram" url="https://www.instagram.com/i_am_the_real_glaze/"/>
+              <Button label="Art Station" url="https://www.artstation.com/glaze"/>
+            </div>
           </div>
         </Layout>
         <Layout>
           <div ref={musicSectionRef} className="h-screen flex flex-col">
-            <div className="w-full flex place-items-center p-10">
-              <h2 className="flex place-content-center text-xl w-80 font-bold">
-                MY MUSIC
-              </h2>
-              <div className="pr-12 w-full">
-                <div className="flex-grow border-4 border-spacing-x-80"></div>
-              </div>
-            </div>
-            <div className="flex flex-row py-20 mx-auto w-2/3">
-              <div className="w-1/2">
-                <h2 className="text-xl">I Am Glaze</h2>
+            <SectionDivider label="MUSIC" />
+
+            <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
+              <div className="md:w-1/2">
+                <h2 className="text-lg w-full md:text-xl">I Am Glaze</h2>
                 <p className="text-base">
-                  ‘I Am Glaze’ is my solo music project.
+                  ... is my solo music project.
                 </p>
-                <div className="flex flex-row gap-6 py-6">
+                <div className="flex flex-col md:flex-row gap-6 py-6">
                   <div className="w-40">
                     <Button
                       label="Spotify"
@@ -146,12 +133,12 @@ const Home: NextPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-1/2">
-                <h2 className="text-xl">Inner Mix</h2>
+              <div className="w-full md:w-1/2">
+                <h2 className="text-lg md:text-xl">Inner Mix</h2>
                 <p className="text-base">
-                  ‘Inner Mix’ is a music group. I am the producer.
+                  ... is a music group. I am the producer.
                 </p>
-                <div className="flex flex-row gap-6 py-6">
+                <div className="flex flex-col md:flex-row gap-6 py-6">
                   <div className="w-40">
                     <Button
                       label="Website"
@@ -173,20 +160,13 @@ const Home: NextPage = () => {
         </Layout>
         <Layout>
           <div ref={programmingSectionRef} className="h-screen flex flex-col">
-            <div className="w-full flex place-items-center p-10">
-              <h2 className="flex place-content-center text-xl w-80 font-bold">
-                MY PROGRAMMING
-              </h2>
-              <div className="pr-12 w-full">
-                <div className="flex-grow border-4 border-spacing-x-80"></div>
-              </div>
-            </div>
-            <div className="flex flex-row h-full py-20">
+            <SectionDivider label="PROGRAMMING" />
+            <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
               <div className="w-full h-full">
-                <h2 className="text-xl">Technologies</h2>
+                <h2 className="text-md md:text-xl">Technologies</h2>
                 <div>
                   <h2 className="text-lg p-5">Web</h2>
-                  <div className="flex flex-row w-fit gap-5 p-5">
+                  <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
                     <Icon icon={<SiReact />} />
                     <Icon icon={<SiNextdotjs />} />
                     <Icon icon={<SiTypescript />} />
@@ -195,7 +175,7 @@ const Home: NextPage = () => {
                 </div>
                 <div>
                   <h2 className="text-lg p-5">Languages</h2>
-                  <div className="flex flex-row w-fit gap-5 p-5">
+                  <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
                     <Icon icon={<SiJavascript />} />
                     <Icon icon={<SiCplusplus />} />
                     <Icon icon={<SiCsharp />} />
@@ -204,7 +184,7 @@ const Home: NextPage = () => {
                 </div>
                 <div>
                   <h2 className="text-lg p-5">Other</h2>
-                  <div className="flex flex-row w-fit gap-5 p-5">
+                  <div className="flex flex-row w-fit gap-5 md:p-5">
                     <Icon icon={<SiUnity />} />
                     <Icon icon={<SiGithub />} />
                     <Icon icon={<SiFigma />} />
@@ -212,7 +192,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="w-full">
-                <h2 className="text-xl p-5">Links</h2>
+                <h2 className="text-md md:text-xl">Links</h2>
                 <div className="w-60 p-5">
                   <Button label="Github" url="https://github.com/Glaze96/" />
                 </div>
@@ -221,24 +201,15 @@ const Home: NextPage = () => {
           </div>
         </Layout>
         <Layout>
-          <div ref={aboutSectionRef} className="h-screen flex flex-col">
-            <div className="w-full flex place-items-center p-10">
-              <h2 className="flex place-content-center text-xl w-80 font-bold">
-                ABOUT GLAZE
-              </h2>
-              <div className="pr-12 w-full">
-                <div className="flex-grow border-4 border-spacing-x-80"></div>
-              </div>
-            </div>
-            <div className="flex flex-row gap-20 py-20 mx-auto w-2/3">
+          <div ref={aboutSectionRef} className="h-fit py-2 flex flex-col">
+            <SectionDivider label="GLAZE" />
+            <div className="flex flex-col-reverse md:flex-row md:gap-20 md:py-20 mx-auto md:w-2/3">
               <p className="text-base">
                 Hi, I Am Glaze. I love making stuff. Creating art has always
                 been a passion of mine. I started my endeavors in digital art
                 and after that I fell in love with more techincal creative
                 fields like programming and 3d modelling. Also, I adore music,
-                both listening to it and creating it. Here's some programs I
-                work with: Blender, FL Studio, Photoshop, Adobe Illustrator and
-                Figma. Other than those, I generally have an easy time picking
+                both listening to it and creating it. I generally have an easy time picking
                 up and learning new software. I have a wonderful girlfriend, a
                 couple of awesome dogs and an amazing family.
               </p>

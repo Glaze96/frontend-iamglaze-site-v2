@@ -5,7 +5,7 @@ interface ImageButtonProps {
   imageUrl: string;
   linkUrl: string;
   textPos: string;
-  cPath: string;
+  cPath?: string;
   zInd: number;
 }
 
@@ -26,13 +26,13 @@ const ImageButton = ({
     <button className="w-full" onClick={() => onClickHandler()}>
       {textPos == "bottom" ? (
         <h3
-          className="bottom-20 right-20 absolute text-2xl"
+          className="bottom-20 right-20 statiuc md:absolute text-xl md:text-2xl"
           style={{ zIndex: 3 }}
         >
           {label}
         </h3>
       ) : (
-        <h3 className="px-12 py-12 absolute text-2xl" style={{ zIndex: 3 }}>
+        <h3 className="px-12 py-12 static md:absolute  text-xl md:text-2xl" style={{ zIndex: 3 }}>
           {label}
         </h3>
       )}
