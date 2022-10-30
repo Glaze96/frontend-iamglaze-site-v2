@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 import Layout from "../components/Layout/Layout";
 import Button from "../components/Misc/button";
@@ -34,6 +35,15 @@ const Home: NextPage = () => {
 
   return (
     <div>
+      <Head>
+        <title>I Am Glaze - Site</title>
+        <link rel="shortcut icon" href="/static/favicon.ico"/>
+        <meta
+          name="description"
+          content="A website made by Glaze, about Glaze"
+          key="desc"
+        />
+      </Head>
       <main className="bg-black p-">
         <Layout>
           <div className="w-full h-screen">
