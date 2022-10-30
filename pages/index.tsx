@@ -129,11 +129,11 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="md:hidden flex flex-col gap-4 py-4">
-              <Button
+              <Button.Link
                 label="Instagram"
                 url="https://www.instagram.com/i_am_the_real_glaze/"
               />
-              <Button
+              <Button.Link
                 label="Art Station"
                 url="https://www.artstation.com/glaze"
               />
@@ -150,17 +150,15 @@ const Home: NextPage = () => {
                 <p className="text-base">... is my solo music project.</p>
                 <div className="flex flex-col md:flex-row gap-6 py-6">
                   <div className="w-40">
-                    <Button
+                    <Button.Link
                       label="Spotify"
                       url="https://open.spotify.com/artist/6gAx05BlEJQcHp7mMVi3eM"
-                      newtab
                     />
                   </div>
                   <div className="w-40">
-                    <Button
+                    <Button.Link
                       label="Youtube"
                       url="https://www.youtube.com/channel/UCXh8mqVGRwUhQvT5ZZG-w0g"
-                      newtab
                     />
                   </div>
                 </div>
@@ -172,17 +170,15 @@ const Home: NextPage = () => {
                 </p>
                 <div className="flex flex-col md:flex-row gap-6 py-6">
                   <div className="w-40">
-                    <Button
+                    <Button.Link
                       label="Website"
                       url="http://www.innermixmusic.com/"
-                      newtab
                     />
                   </div>
                   <div className="w-40">
-                    <Button
+                    <Button.Link
                       label="Youtube"
                       url="https://www.youtube.com/channel/UCtbHyCDGZA6pmNVEKWjORdg"
-                      newtab
                     />
                   </div>
                 </div>
@@ -226,7 +222,7 @@ const Home: NextPage = () => {
               <div className="w-full">
                 <h2 className="text-md md:text-xl">Links</h2>
                 <div className="w-60 p-5">
-                  <Button label="Github" url="https://github.com/Glaze96/" />
+                  <Button.Link label="Github" url="https://github.com/Glaze96/" />
                 </div>
               </div>
             </div>

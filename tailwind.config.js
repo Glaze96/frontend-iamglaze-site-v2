@@ -25,6 +25,7 @@ module.exports = {
       md: "640px",
       lg: "1220px",
       xl: "2400px",
+      "sm-phone": { raw: "(max-height: 500px) and (max-width: 1920px)" },
     },
     borderRadius: {
       sm: "0.3rem",
