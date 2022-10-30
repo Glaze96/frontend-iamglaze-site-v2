@@ -235,7 +235,7 @@ const Home: NextPage = () => {
                 girlfriend, a couple of awesome dogs and an amazing family.
               </p>
               <div>
-                <Image src={glazePicture} />
+                <Image src={glazePicture} alt="profile picture"/>
               </div>
             </div>
           </div>
