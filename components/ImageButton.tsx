@@ -7,6 +7,7 @@ interface ImageButtonProps {
   textPos: string;
   cPath?: string;
   zInd: number;
+  alt: string;
 }
 
 const ImageButton = ({
@@ -16,6 +17,7 @@ const ImageButton = ({
   textPos,
   cPath,
   zInd,
+  alt
 }: ImageButtonProps) => {
   function onClickHandler() {
     console.log("clicked!!");
@@ -44,6 +46,7 @@ const ImageButton = ({
           clipPath: cPath,
           zIndex: zInd,
         }}
+        alt={alt}
       />
     </button>
   );

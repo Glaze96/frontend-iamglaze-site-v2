@@ -42,6 +42,7 @@ const Home: NextPage = () => {
                 src="/bg-pattern.svg"
                 layout="fill"
                 objectFit="cover"
+                alt="background"
                 style={{
                   WebkitMaskImage:
                     "-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))",
@@ -98,6 +99,7 @@ const Home: NextPage = () => {
                   textPos="top"
                   cPath="polygon(100% 0, 0 0, 0 100%)"
                   zInd={2}
+                  alt="instagram image"
                 />
               </div>
               <div className="absolute w-3/4 h-3/4">
@@ -108,6 +110,7 @@ const Home: NextPage = () => {
                   textPos="bottom"
                   cPath="polygon(100% 0, 0% 100%, 100% 100%)"
                   zInd={1}
+                  alt="artstation image"
                 />
               </div>
             </div>
