@@ -200,36 +200,36 @@ const Home: NextPage = () => {
             <SectionDivider label="PROGRAMMING" />
             <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
               <div className="w-full h-full">
-                <h3 className="text-lg md:text-xl">Technologies</h3>
+                <h2 className="text-lg md:text-xl">Technologies</h2>
                 <div>
                   <h3 className="text-lg p-5">Web</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-                    <Icon icon={<SiReact />} size="text-xl" />
-                    <Icon icon={<SiNextdotjs />} size="text-xl" />
-                    <Icon icon={<SiTypescript />} size="text-xl" />
-                    <Icon icon={<SiStyledcomponents />} size="text-xl" />
+                    <Icon.Hover label="React" icon={<SiReact />} size="text-xl" />
+                    <Icon.Hover label="Next.js" icon={<SiNextdotjs />} size="text-xl" />
+                    <Icon.Hover label="TypeScript" icon={<SiTypescript />} size="text-xl" />
+                    <Icon.Hover label="Styled" icon={<SiStyledcomponents />} size="text-xl" />
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg p-5">Languages</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-                    <Icon icon={<SiJavascript />} size="text-xl" />
-                    <Icon icon={<SiCplusplus />} size="text-xl" />
-                    <Icon icon={<SiCsharp />} size="text-xl" />
-                    <Icon icon={<SiPython />} size="text-xl" />
+                    <Icon.Hover label="Javascript" icon={<SiJavascript />} size="text-xl" />
+                    <Icon.Hover label="C++" icon={<SiCplusplus />} size="text-xl" />
+                    <Icon.Hover label="C#" icon={<SiCsharp />} size="text-xl" />
+                    <Icon.Hover label="Python" icon={<SiPython />} size="text-xl" />
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg p-5">Other</h3>
                   <div className="flex flex-row w-fit gap-5 md:p-5">
-                    <Icon icon={<SiUnity />} size="text-xl" />
-                    <Icon icon={<SiGithub />} size="text-xl" />
-                    <Icon icon={<SiFigma />} size="text-xl" />
+                    <Icon.Hover label="Unity" icon={<SiUnity />} size="text-xl" />
+                    <Icon.Hover label="Github" icon={<SiGithub />} size="text-xl" />
+                    <Icon.Hover label="Figma" icon={<SiFigma />} size="text-xl" />
                   </div>
                 </div>
               </div>
               <div className="w-full">
-                <h2 className="text-md md:text-xl">Links</h2>
+                <h2 className="text-lg md:text-xl">Links</h2>
                 <div className="w-60 p-5">
                   <Button.Link
                     label="Github"
@@ -248,7 +248,7 @@ const Home: NextPage = () => {
               className="md:h-screen h-fit py-2 flex flex-col"
             >
               <SectionDivider label="GLAZE" />
-              <div className="flex flex-col-reverse md:flex-row md:gap-20 md:py-20 mx-auto md:w-2/3">
+              <div className="flex flex-col-reverse gap-2 md:flex-row md:gap-20 md:py-20 mx-auto md:w-2/3">
                 <p className="text-base">
                   Hi, I Am Glaze. I love making stuff. Creating art has always
                   been a passion of mine. I started my endeavors in digital art

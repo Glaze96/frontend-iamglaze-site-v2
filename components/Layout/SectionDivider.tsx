@@ -4,7 +4,7 @@ interface SectionDividerProps {
 
 const SectionDivider = ({ label }: SectionDividerProps) => {
   return (
-    <div className="w-full flex place-items-center md:p-10">
+    <div className="w-full flex place-items-center py-2 md:p-10">
       <h2 className="text-lg md:text-xl font-bold pr-5">
         {label}
       </h2>
