@@ -43,7 +43,6 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'art': "url('../public/Resources/2d.jpg')",
       },
     },
     fontSize: {

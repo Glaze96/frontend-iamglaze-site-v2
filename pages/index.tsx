@@ -34,14 +34,25 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <main className="bg-black">
+      <main className="bg-black p-">
         <Layout>
-          <div className="h-screen bg-black">
+          <div className="w-full h-screen">
+            <div className="">
+              <Image
+                src="/bg-pattern.svg"
+                layout="fill"
+                objectFit="cover"
+                style={{
+                  WebkitMaskImage:
+                    "-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))",
+                }}
+              />
+            </div>
             <div className="flex items-center flex-col py-14 md:py-28 h-full">
               <div className="relative w-full h-full md:w-1/2 md:h-1/2">
                 <Image src="/Logo/RECT LOGO_svg.svg" layout="fill" alt="logo" />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col  z-10">
                 <h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold">
                   CHECK OUT:
                 </h2>
@@ -101,8 +112,14 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className="md:hidden flex flex-col gap-4 py-4">
-              <Button label="Instagram" url="https://www.instagram.com/i_am_the_real_glaze/"/>
-              <Button label="Art Station" url="https://www.artstation.com/glaze"/>
+              <Button
+                label="Instagram"
+                url="https://www.instagram.com/i_am_the_real_glaze/"
+              />
+              <Button
+                label="Art Station"
+                url="https://www.artstation.com/glaze"
+              />
             </div>
           </div>
         </Layout>
@@ -113,9 +130,7 @@ const Home: NextPage = () => {
             <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
               <div className="md:w-1/2">
                 <h2 className="text-lg w-full md:text-xl">I Am Glaze</h2>
-                <p className="text-base">
-                  ... is my solo music project.
-                </p>
+                <p className="text-base">... is my solo music project.</p>
                 <div className="flex flex-col md:flex-row gap-6 py-6">
                   <div className="w-40">
                     <Button
@@ -201,7 +216,10 @@ const Home: NextPage = () => {
           </div>
         </Layout>
         <Layout>
-          <div ref={aboutSectionRef} className="md:h-screen h-fit py-2 flex flex-col">
+          <div
+            ref={aboutSectionRef}
+            className="md:h-screen h-fit py-2 flex flex-col"
+          >
             <SectionDivider label="GLAZE" />
             <div className="flex flex-col-reverse md:flex-row md:gap-20 md:py-20 mx-auto md:w-2/3">
               <p className="text-base">
@@ -209,9 +227,9 @@ const Home: NextPage = () => {
                 been a passion of mine. I started my endeavors in digital art
                 and after that I fell in love with more techincal creative
                 fields like programming and 3d modelling. Also, I adore music,
-                both listening to it and creating it. I generally have an easy time picking
-                up and learning new software. I have a wonderful girlfriend, a
-                couple of awesome dogs and an amazing family.
+                both listening to it and creating it. I generally have an easy
+                time picking up and learning new software. I have a wonderful
+                girlfriend, a couple of awesome dogs and an amazing family.
               </p>
               <div>
                 <Image src={glazePicture} />
