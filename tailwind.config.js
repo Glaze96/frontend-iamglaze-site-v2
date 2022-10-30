@@ -35,10 +35,10 @@ module.exports = {
     },
     colors: {
       primary: "#FF94FD",
-      primary2: "#d997de",
       primaryDark: "#362136",
       secondary: "#74ABFF",
       black: "#131414",
+      blackSecondary: "#1b1d21",
       white: "#F8F8F8",
 
       transparent: "hsl(0,0%,0%,0)",
