@@ -86,27 +86,26 @@ const Home: NextPage = () => {
                 <div className="flex-grow border-4 border-spacing-x-80"></div>
               </div>
             </div>
-            <div className="flex flex-row h-3/4">
-              <div
-                className="h-full w-full"
-                style={{
-                  clipPath: "polygon(0 0, 75% 0, 25% 100%, 0 100%)",
-                  zIndex: 1,
-                }}
-              >
+
+            <div className="h-full">
+              <div className="absolute w-3/4 h-3/4">
                 <ImageButton
                   label="Instagram"
                   imageUrl="Resources/2d.jpg"
                   linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
                   textPos="top"
+                  cPath="polygon(100% 0, 0 0, 0 100%)"
+                  zInd={2}
                 />
               </div>
-              <div className="absolute h-3/4 w-3/4">
+              <div className="absolute w-3/4 h-3/4">
                 <ImageButton
                   label="ArtStation"
                   imageUrl="Resources/3d.jpg"
                   linkUrl="https://www.artstation.com/glaze"
                   textPos="bottom"
+                  cPath="polygon(100% 0, 0% 100%, 100% 100%)"
+                  zInd={1}
                 />
               </div>
             </div>

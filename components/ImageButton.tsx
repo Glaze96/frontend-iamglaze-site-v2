@@ -1,8 +1,12 @@
+import Image from "next/image";
+
 interface ImageButtonProps {
   label: string;
   imageUrl: string;
   linkUrl: string;
   textPos: string;
+  cPath: string;
+  zInd: number;
 }
 
 const ImageButton = ({
@@ -10,6 +14,8 @@ const ImageButton = ({
   imageUrl,
   linkUrl,
   textPos,
+  cPath,
+  zInd,
 }: ImageButtonProps) => {
   function onClickHandler() {
     console.log("clicked!!");
@@ -17,12 +23,12 @@ const ImageButton = ({
   }
 
   return (
-    <button
-      className="w-full h-full overflow-hidden"
-      onClick={() => onClickHandler()}
-    >
+    <button className="w-full" onClick={() => onClickHandler()}>
       {textPos == "bottom" ? (
-        <h3 className="bottom-20 right-20 absolute text-2xl" style={{ zIndex: 3 }}>
+        <h3
+          className="bottom-20 right-20 absolute text-2xl"
+          style={{ zIndex: 3 }}
+        >
           {label}
         </h3>
       ) : (
@@ -30,21 +36,15 @@ const ImageButton = ({
           {label}
         </h3>
       )}
-      <img
-        src={imageUrl}
-        className="brightness-90 hover:brightness-100 hover:scale-110 transition-all w-full h-full overflow-hidden"
+      <Image
+        src={"/" + imageUrl}
+        layout="fill"
+        className="brightness-90 hover:brightness-100 hover:scale-110 transition-all"
+        style={{
+          clipPath: cPath,
+          zIndex: zInd,
+        }}
       />
-      {/* <section
-        className={
-          "h-full bg-[url('../public/" +
-          imageUrl +
-          "')] bg-no-repeat bg-cover bg-center brightness-90 hover:brightness-100 hover:scale-110 transition-all"
-        }
-      >
-        <div className="w-full h-full grid place-content-center">
-          <h3 className="text-xl select-none">{label}</h3>
-        </div>
-      </section> */}
     </button>
   );
 };
