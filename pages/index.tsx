@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { Parallax } from "react-scroll-parallax";
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -34,7 +35,6 @@ const Home: NextPage = () => {
   const aboutSectionRef = useRef(null);
   const programmingSectionRef = useRef(null);
   const executeScroll = (sectionRef: any) => scrollToRef(sectionRef);
-
   return (
     <div>
       <Head>
@@ -53,18 +53,16 @@ const Home: NextPage = () => {
       <main className="bg-black">
         <Layout>
           <div className="w-full h-screen">
-            <div className="">
-              <Image
-                src="/bg-pattern.svg"
-                layout="fill"
-                objectFit="cover"
-                alt="background"
-                style={{
-                  WebkitMaskImage:
-                    "-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))",
-                }}
-              />
-            </div>
+            <Image
+              src="/bg-pattern.svg"
+              layout="fill"
+              objectFit="cover"
+              alt="background"
+              style={{
+                WebkitMaskImage:
+                  "-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))",
+              }}
+            />
             <div className="flex items-center flex-col py-14 md:py-28 h-full">
               <div className="relative w-full h-full md:w-1/2 md:h-1/2">
                 <Image src="/Logo/RECT LOGO_svg.svg" layout="fill" alt="logo" />
@@ -204,27 +202,67 @@ const Home: NextPage = () => {
                 <div>
                   <h3 className="text-lg p-5">Web</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-                    <Icon.Hover label="React" icon={<SiReact />} size="text-xl" />
-                    <Icon.Hover label="Next.js" icon={<SiNextdotjs />} size="text-xl" />
-                    <Icon.Hover label="TypeScript" icon={<SiTypescript />} size="text-xl" />
-                    <Icon.Hover label="Styled" icon={<SiStyledcomponents />} size="text-xl" />
+                    <Icon.Hover
+                      label="React"
+                      icon={<SiReact />}
+                      size="text-xl"
+                    />
+                    <Icon.Hover
+                      label="Next.js"
+                      icon={<SiNextdotjs />}
+                      size="text-xl"
+                    />
+                    <Icon.Hover
+                      label="TypeScript"
+                      icon={<SiTypescript />}
+                      size="text-xl"
+                    />
+                    <Icon.Hover
+                      label="Styled"
+                      icon={<SiStyledcomponents />}
+                      size="text-xl"
+                    />
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg p-5">Languages</h3>
                   <div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-                    <Icon.Hover label="Javascript" icon={<SiJavascript />} size="text-xl" />
-                    <Icon.Hover label="C++" icon={<SiCplusplus />} size="text-xl" />
+                    <Icon.Hover
+                      label="Javascript"
+                      icon={<SiJavascript />}
+                      size="text-xl"
+                    />
+                    <Icon.Hover
+                      label="C++"
+                      icon={<SiCplusplus />}
+                      size="text-xl"
+                    />
                     <Icon.Hover label="C#" icon={<SiCsharp />} size="text-xl" />
-                    <Icon.Hover label="Python" icon={<SiPython />} size="text-xl" />
+                    <Icon.Hover
+                      label="Python"
+                      icon={<SiPython />}
+                      size="text-xl"
+                    />
                   </div>
                 </div>
                 <div>
                   <h3 className="text-lg p-5">Other</h3>
                   <div className="flex flex-row w-fit gap-5 md:p-5">
-                    <Icon.Hover label="Unity" icon={<SiUnity />} size="text-xl" />
-                    <Icon.Hover label="Github" icon={<SiGithub />} size="text-xl" />
-                    <Icon.Hover label="Figma" icon={<SiFigma />} size="text-xl" />
+                    <Icon.Hover
+                      label="Unity"
+                      icon={<SiUnity />}
+                      size="text-xl"
+                    />
+                    <Icon.Hover
+                      label="Github"
+                      icon={<SiGithub />}
+                      size="text-xl"
+                    />
+                    <Icon.Hover
+                      label="Figma"
+                      icon={<SiFigma />}
+                      size="text-xl"
+                    />
                   </div>
                 </div>
               </div>
