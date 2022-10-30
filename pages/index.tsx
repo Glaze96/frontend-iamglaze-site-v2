@@ -201,7 +201,7 @@ const Home: NextPage = () => {
           </div>
         </Layout>
         <Layout>
-          <div ref={aboutSectionRef} className="h-fit py-2 flex flex-col">
+          <div ref={aboutSectionRef} className="md:h-screen h-fit py-2 flex flex-col">
             <SectionDivider label="GLAZE" />
             <div className="flex flex-col-reverse md:flex-row md:gap-20 md:py-20 mx-auto md:w-2/3">
               <p className="text-base">
