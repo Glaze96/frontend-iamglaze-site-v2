@@ -84,28 +84,24 @@ const Home: NextPage = () => {
                   <div className="w-80">
                     <Button
                       label="MY ART"
-                      section="art"
                       callback={() => executeScroll(artSectionRef)}
                     />
                   </div>
                   <div className="w-80">
                     <Button
                       label="MY MUSIC"
-                      section="music"
                       callback={() => executeScroll(musicSectionRef)}
                     />
                   </div>
                   <div className="w-80">
                     <Button
                       label="MY PROGRAMMING"
-                      section="programming"
                       callback={() => executeScroll(programmingSectionRef)}
                     />
                   </div>
                   <div className="w-80">
                     <Button
                       label="GLAZE"
-                      section="about"
                       callback={() => executeScroll(aboutSectionRef)}
                     />
                   </div>
