@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -32,6 +32,8 @@ import { FaArrowCircleUp } from "react-icons/fa";
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
 const Home: NextPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   const landingSectionRef = useRef(null);
   const artSectionRef = useRef(null);
   const musicSectionRef = useRef(null);
@@ -42,6 +44,24 @@ const Home: NextPage = () => {
   useEffect(() => {
     let getMeTo = document.getElementById(window.location.hash);
     getMeTo?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
+  const listenToScroll = () => {
+    let heightToHideFrom = screen.height;
+
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll < heightToHideFrom) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
 
   return (
@@ -72,12 +92,14 @@ const Home: NextPage = () => {
             }}
           />
         </Parallax>
-        <div className="sticky top-5 pl-5 z-10 hidden md:block sm-phone:hidden">
-          <Button.Icon
-            icon={<FaArrowCircleUp />}
-            callback={() => executeScroll(landingSectionRef)}
-          />
-        </div>
+        {isVisible && (
+          <div className="fixed w-fit top-5 pl-5 z-10 hidden md:block sm-phone:hidden">
+            <Button.Icon
+              icon={<FaArrowCircleUp />}
+              callback={() => executeScroll(landingSectionRef)}
+            />
+          </div>
+        )}
         <Layout>
           <div
             ref={landingSectionRef}
