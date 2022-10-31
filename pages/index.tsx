@@ -47,7 +47,7 @@ const Home: NextPage = () => {
   }, []);
 
   const listenToScroll = () => {
-    let heightToHideFrom = screen.height;
+    let heightToHideFrom = screen.height - 200;
 
     const winScroll =
       document.body.scrollTop || document.documentElement.scrollTop;
