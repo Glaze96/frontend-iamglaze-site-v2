@@ -153,7 +153,7 @@ const Home: NextPage = () => {
             <div className="h-screen hidden md:block sm-phone:hidden">
               <div className="absolute w-3/4 h-3/4">
                 <ImageButton
-                  label="Instagram"
+                  label="2D: Instagram"
                   imageUrl="Resources/2d.jpg"
                   linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
                   textPos="top"
@@ -164,7 +164,7 @@ const Home: NextPage = () => {
               </div>
               <div className="absolute w-3/4 h-3/4">
                 <ImageButton
-                  label="ArtStation"
+                  label="3D: ArtStation"
                   imageUrl="Resources/3d.jpg"
                   linkUrl="https://www.artstation.com/glaze"
                   textPos="bottom"
@@ -345,6 +345,9 @@ const Home: NextPage = () => {
                   both listening to it and creating it. I generally have an easy
                   time picking up and learning new software. I have a wonderful
                   girlfriend, a couple of awesome dogs and an amazing family.
+                  <br />
+                  <br />
+                  Contact me at: itmeglaze@gmail.com
                 </p>
                 <div>
                   <Image src={glazePicture} alt="profile picture" />
