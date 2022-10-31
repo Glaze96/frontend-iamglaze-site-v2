@@ -80,7 +80,7 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className="bg-black">
-        <Parallax speed={-40} className="absolute w-screen h-screen">
+        <Parallax speed={-40} className="absolute w-full h-screen">
           <Image
             src="/bg-pattern.svg"
             layout="fill"
