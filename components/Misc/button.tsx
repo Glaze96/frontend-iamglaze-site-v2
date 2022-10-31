@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { SiFontawesome } from "react-icons/si";
 import Icon from "./Icon";
+import { useRouter } from "next/router";
 
 interface ButtonProps {
   label: string;
+  section?: string;
   callback?: () => any;
 }
 
@@ -12,15 +13,17 @@ interface LinkButtonProps extends ButtonProps {
   icon?: JSX.Element;
 }
 
-const Button = ({ label, callback }: ButtonProps) => {
-  function onClickHandler(func: any) {
+const Button = ({ label, callback, section }: ButtonProps) => {
+  const router = useRouter();
+  function onClickHandler(func: any, section?: string) {
     if (func) func();
+    if (section) router.push("/#" + section, undefined, { shallow: true });
   }
 
   return (
     <button
       className="px-2 py-2 rounded-md hover:scale-110 font-bold transition-all w-full border-primary border-4 bg-primaryDark"
-      onClick={() => onClickHandler(callback)}
+      onClick={() => onClickHandler(callback, section)}
     >
       <h2>{label}</h2>
     </button>
