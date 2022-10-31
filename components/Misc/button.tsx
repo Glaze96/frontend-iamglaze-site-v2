@@ -13,6 +13,11 @@ interface LinkButtonProps extends ButtonProps {
   icon?: JSX.Element;
 }
 
+interface IconButtonProps {
+  icon?: JSX.Element;
+  callback?: () => any;
+}
+
 const Button = ({ label, callback, section }: ButtonProps) => {
   const router = useRouter();
   function onClickHandler(func: any, section?: string) {
@@ -49,5 +54,20 @@ const LinkButton = ({ label, url, icon }: LinkButtonProps) => {
   );
 };
 
+const IconButton = ({ icon, callback }: IconButtonProps) => {
+  function onClickHandler(func: any, section?: string) {
+    if (func) func();
+  }
+  return (
+    <button
+      className="text-xl text-secondary hover:scale-110 transition-all"
+      onClick={() => onClickHandler(callback)}
+    >
+      <figure>{icon}</figure>
+    </button>
+  );
+};
+
 Button.Link = LinkButton;
+Button.Icon = IconButton;
 export default Button;

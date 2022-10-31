@@ -27,6 +27,8 @@ import {
   SiFigma,
 } from "react-icons/si";
 
+import { FaArrowCircleUp } from "react-icons/fa";
+
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
 const Home: NextPage = () => {
@@ -39,7 +41,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     let getMeTo = document.getElementById(window.location.hash);
-    getMeTo?.scrollIntoView({behavior: "smooth"});
+    getMeTo?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
   return (
@@ -70,8 +72,17 @@ const Home: NextPage = () => {
             }}
           />
         </Parallax>
+        <div className="sticky top-5 pl-5 z-10">
+          <Button.Icon
+            icon={<FaArrowCircleUp />}
+            callback={() => executeScroll(landingSectionRef)}
+          />
+        </div>
         <Layout>
-          <div ref={landingSectionRef} className="w-full h-screen sm-phone:h-full">
+          <div
+            ref={landingSectionRef}
+            className="w-full h-screen sm-phone:h-full"
+          >
             <div className="flex items-center flex-col py-14 md:py-28 h-full sm-phone:flex-row sm-phone:py-0">
               <div className="relative w-full h-full md:w-1/2 md:h-1/2 sm-phone:h-screen">
                 <Image src="/Logo/RECT LOGO_svg.svg" layout="fill" alt="logo" />
@@ -207,7 +218,11 @@ const Home: NextPage = () => {
           </Layout>
         </div>
         <Layout>
-          <div id="#programming" ref={programmingSectionRef} className="flex flex-col">
+          <div
+            id="#programming"
+            ref={programmingSectionRef}
+            className="flex flex-col"
+          >
             <SectionDivider label="PROGRAMMING" />
             <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
               <div className="w-full h-full">
