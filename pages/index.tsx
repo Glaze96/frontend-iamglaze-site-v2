@@ -72,7 +72,7 @@ const Home: NextPage = () => {
             }}
           />
         </Parallax>
-        <div className="sticky top-5 pl-5 z-10">
+        <div className="sticky top-5 pl-5 z-10 hidden md:block sm-phone:hidden">
           <Button.Icon
             icon={<FaArrowCircleUp />}
             callback={() => executeScroll(landingSectionRef)}
