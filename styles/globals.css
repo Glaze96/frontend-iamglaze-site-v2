@@ -21,16 +21,6 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
 @font-face {
   font-family: "Poppins";
   src: url('../assets/Poppins/Poppins-Regular.ttf');
@@ -43,6 +33,26 @@ a {
   font-weight: bold;
 }
 
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
 h1 {
   font-family: "Poppins";
   font-weight: bold;
