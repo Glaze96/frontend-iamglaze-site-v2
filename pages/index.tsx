@@ -52,7 +52,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="bg-black">
         <Layout>
-          <div className="w-full h-screen">
+          <div className="w-full h-screen sm-phone:h-full">
             <Image
               src="/bg-pattern.svg"
               layout="fill"
@@ -63,15 +63,15 @@ const Home: NextPage = () => {
                   "-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))",
               }}
             />
-            <div className="flex items-center flex-col py-14 md:py-28 h-full">
-              <div className="relative w-full h-full md:w-1/2 md:h-1/2">
+            <div className="flex items-center flex-col py-14 md:py-28 h-full sm-phone:flex-row sm-phone:py-0">
+              <div className="relative w-full h-full md:w-1/2 md:h-1/2 sm-phone:h-screen">
                 <Image src="/Logo/RECT LOGO_svg.svg" layout="fill" alt="logo" />
               </div>
-              <div className="flex flex-col  z-10">
-                <h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold">
+              <div className="flex flex-col z-10">
+                <h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold sm-phone:text-lg sm-phone:p-2">
                   CHECK OUT:
                 </h2>
-                <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row">
+                <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row sm-phone:flex-col sm-phone:gap-2">
                   <div className="w-80">
                     <Button
                       label="MY ART"
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
         <Layout>
           <div ref={artSectionRef} className="flex flex-col h-fit">
             <SectionDivider label="ART" />
-            <div className="h-screen hidden md:block">
+            <div className="h-screen hidden md:block sm-phone:hidden">
               <div className="absolute w-3/4 h-3/4">
                 <ImageButton
                   label="Instagram"
@@ -128,7 +128,7 @@ const Home: NextPage = () => {
                 />
               </div>
             </div>
-            <div className="md:hidden flex flex-col gap-4 py-4">
+            <div className="md:hidden flex flex-col gap-4 py-4 sm-phone:block sm-phone:px-20">
               <Button.Link
                 label="Instagram"
                 url="https://www.instagram.com/i_am_the_real_glaze/"
@@ -146,7 +146,7 @@ const Home: NextPage = () => {
           <Layout>
             <div ref={musicSectionRef} className="flex flex-col">
               <SectionDivider label="MUSIC" />
-              <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
+              <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
                 <div className="md:w-1/2">
                   <h2 className="text-lg w-full md:text-xl">I Am Glaze</h2>
                   <p className="text-base">... is my solo music project.</p>
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
         <Layout>
           <div ref={programmingSectionRef} className="flex flex-col">
             <SectionDivider label="PROGRAMMING" />
-            <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3">
+            <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
               <div className="w-full h-full">
                 <h2 className="text-lg md:text-xl">Technologies</h2>
                 <div>
@@ -283,10 +283,10 @@ const Home: NextPage = () => {
           <Layout>
             <div
               ref={aboutSectionRef}
-              className="md:h-screen h-fit py-2 flex flex-col"
+              className="md:h-screen h-fit py-2 flex flex-col sm-phone:h-fit"
             >
               <SectionDivider label="GLAZE" />
-              <div className="flex flex-col-reverse gap-2 md:flex-row md:gap-20 md:py-20 mx-auto md:w-2/3">
+              <div className="flex flex-col-reverse gap-2 md:flex-row md:gap-20 md:py-20 mx-auto md:w-2/3 sm-phone:flex-col-reverse sm-phone:gap-2 sm-phone:py-0">
                 <p className="text-base">
                   Hi, I Am Glaze. I love making stuff. Creating art has always
                   been a passion of mine. I started my endeavors in digital art
