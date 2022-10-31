@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { NextPage } from "next";
 import Head from "next/head";
@@ -30,11 +30,18 @@ import {
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
 const Home: NextPage = () => {
+  const landingSectionRef = useRef(null);
   const artSectionRef = useRef(null);
   const musicSectionRef = useRef(null);
   const aboutSectionRef = useRef(null);
   const programmingSectionRef = useRef(null);
   const executeScroll = (sectionRef: any) => scrollToRef(sectionRef);
+
+  useEffect(() => {
+    let getMeTo = document.getElementById(window.location.hash);
+    getMeTo?.scrollIntoView({behavior: "smooth"});
+  }, []);
+
   return (
     <div>
       <Head>
@@ -64,7 +71,7 @@ const Home: NextPage = () => {
           />
         </Parallax>
         <Layout>
-          <div className="w-full h-screen sm-phone:h-full">
+          <div ref={landingSectionRef} className="w-full h-screen sm-phone:h-full">
             <div className="flex items-center flex-col py-14 md:py-28 h-full sm-phone:flex-row sm-phone:py-0">
               <div className="relative w-full h-full md:w-1/2 md:h-1/2 sm-phone:h-screen">
                 <Image src="/Logo/RECT LOGO_svg.svg" layout="fill" alt="logo" />
@@ -77,24 +84,28 @@ const Home: NextPage = () => {
                   <div className="w-80">
                     <Button
                       label="MY ART"
+                      section="art"
                       callback={() => executeScroll(artSectionRef)}
                     />
                   </div>
                   <div className="w-80">
                     <Button
                       label="MY MUSIC"
+                      section="music"
                       callback={() => executeScroll(musicSectionRef)}
                     />
                   </div>
                   <div className="w-80">
                     <Button
                       label="MY PROGRAMMING"
+                      section="programming"
                       callback={() => executeScroll(programmingSectionRef)}
                     />
                   </div>
                   <div className="w-80">
                     <Button
                       label="GLAZE"
+                      section="about"
                       callback={() => executeScroll(aboutSectionRef)}
                     />
                   </div>
@@ -104,7 +115,7 @@ const Home: NextPage = () => {
           </div>
         </Layout>
         <Layout>
-          <div ref={artSectionRef} className="flex flex-col h-fit">
+          <div id="#art" ref={artSectionRef} className="flex flex-col h-fit">
             <SectionDivider label="ART" />
             <div className="h-screen hidden md:block sm-phone:hidden">
               <div className="absolute w-3/4 h-3/4">
@@ -146,7 +157,7 @@ const Home: NextPage = () => {
         </Layout>
         <div className="bg-blackSecondary">
           <Layout>
-            <div ref={musicSectionRef} className="flex flex-col">
+            <div id="#music" ref={musicSectionRef} className="flex flex-col">
               <SectionDivider label="MUSIC" />
               <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
                 <div className="md:w-1/2">
@@ -196,7 +207,7 @@ const Home: NextPage = () => {
           </Layout>
         </div>
         <Layout>
-          <div ref={programmingSectionRef} className="flex flex-col">
+          <div id="#programming" ref={programmingSectionRef} className="flex flex-col">
             <SectionDivider label="PROGRAMMING" />
             <div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
               <div className="w-full h-full">
@@ -281,7 +292,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </Layout>
-        <div className="bg-blackSecondary">
+        <div id="#about" className="bg-blackSecondary">
           <Layout>
             <div
               ref={aboutSectionRef}
