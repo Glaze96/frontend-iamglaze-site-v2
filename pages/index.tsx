@@ -51,18 +51,20 @@ const Home: NextPage = () => {
         />
       </Head>
       <main className="bg-black">
+        <Parallax speed={-40} className="absolute w-screen h-screen">
+          <Image
+            src="/bg-pattern.svg"
+            layout="fill"
+            objectFit="cover"
+            alt="background"
+            style={{
+              WebkitMaskImage:
+                "-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))",
+            }}
+          />
+        </Parallax>
         <Layout>
           <div className="w-full h-screen sm-phone:h-full">
-            <Image
-              src="/bg-pattern.svg"
-              layout="fill"
-              objectFit="cover"
-              alt="background"
-              style={{
-                WebkitMaskImage:
-                  "-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))",
-              }}
-            />
             <div className="flex items-center flex-col py-14 md:py-28 h-full sm-phone:flex-row sm-phone:py-0">
               <div className="relative w-full h-full md:w-1/2 md:h-1/2 sm-phone:h-screen">
                 <Image src="/Logo/RECT LOGO_svg.svg" layout="fill" alt="logo" />
