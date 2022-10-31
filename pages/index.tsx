@@ -113,7 +113,7 @@ const Home: NextPage = () => {
                 <h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold sm-phone:text-lg sm-phone:p-2">
                   CHECK OUT:
                 </h2>
-                <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row sm-phone:flex-col sm-phone:gap-2">
+                <div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row sm-phone:flex-col sm-phone:gap-2 place-content-center flex-wrap">
                   <div className="w-80">
                     <Button
                       label="MY ART"
