@@ -37,8 +37,7 @@ const Button = ({ label, callback, section }: ButtonProps) => {
 
 const LinkButton = ({ label, url, icon }: LinkButtonProps) => {
   return (
-    <Link href={url} passHref>
-      <a target="_blank">
+    <Link href={url} target="_blank" passHref>
         <div className="px-2 py-2 rounded-mdfont-bold transition-all w-fit flex flex-row gap-2 place-content-start">
           <h3 className="text-lg underline underline-offset-3 text-secondary hover:text-white ">
             {label}
@@ -49,7 +48,6 @@ const LinkButton = ({ label, url, icon }: LinkButtonProps) => {
             </div>
           )}
         </div>
-      </a>
     </Link>
   );
 };
