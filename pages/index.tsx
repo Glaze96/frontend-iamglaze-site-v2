@@ -147,7 +147,7 @@ const Home: NextPage = () => {
 									BUSINESS:
 								</h2>
 								<div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row sm-phone:flex-col sm-phone:gap-2 place-content-center flex-wrap">
-									<Button.Link label="Commission my work" url="/commission" />
+									<Button.Link label="Commission my work" url="/commission" sameTab/>
 								</div>
 							</div>
 						</div>

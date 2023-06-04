@@ -1,6 +1,8 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
+import Button from "../components/Misc/button";
+
 
 const CommissionPage : NextPage = () => {
 
@@ -22,8 +24,12 @@ const CommissionPage : NextPage = () => {
       </Head>
 
       <Layout>
+        <div>
+          <Button.Link label="Main page" url="/" sameTab />
+          
+        </div>
         <div className="w-full h-screen sm-phone:h-full">
-          <h1>Under Construction.</h1>
+          <h1 className="mx-auto text-center py-20">Under Construction.</h1>
         </div>
       </Layout>
 
