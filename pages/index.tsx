@@ -110,6 +110,13 @@ const Home: NextPage = () => {
 								<Image src="/Logo/RECT LOGO_svg.svg" fill alt="logo" />
 							</div>
 							<div className="flex flex-col">
+								<div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row sm-phone:flex-col sm-phone:gap-2 place-content-center flex-wrap">
+									<Button.Link
+										label="Commission my work"
+										url="/commission"
+										sameTab
+									/>
+								</div>
 								<h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold sm-phone:text-lg sm-phone:p-2">
 									CHECK OUT:
 								</h2>
@@ -143,18 +150,16 @@ const Home: NextPage = () => {
 										/>
 									</div>
 								</div>
-								<h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold sm-phone:text-lg sm-phone:p-2">
-									BUSINESS:
-								</h2>
-								<div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row sm-phone:flex-col sm-phone:gap-2 place-content-center flex-wrap">
-									<Button.Link label="Commission my work" url="/commission" sameTab/>
-								</div>
 							</div>
 						</div>
 					</div>
 				</Layout>
 				<Layout>
-					<div id="#art" ref={artSectionRef} className="flex flex-col h-fit z-10">
+					<div
+						id="#art"
+						ref={artSectionRef}
+						className="flex flex-col h-fit z-10"
+					>
 						<SectionDivider label="ART" />
 						<div className="h-screen hidden md:block sm-phone:hidden">
 							<div className="absolute w-3/4 h-3/4">
@@ -196,7 +201,11 @@ const Home: NextPage = () => {
 				</Layout>
 				<div className="bg-blackSecondary">
 					<Layout>
-						<div id="#music" ref={musicSectionRef} className="flex flex-col z-10">
+						<div
+							id="#music"
+							ref={musicSectionRef}
+							className="flex flex-col z-10"
+						>
 							<SectionDivider label="MUSIC" />
 							<div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
 								<div className="md:w-1/2">
