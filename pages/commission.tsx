@@ -43,7 +43,7 @@ const CommissionPage: NextPage = () => {
 							<div className="bg-black flex flex-col p-4 h-full w-auto">
 								<div className="flex flex-col p-2 md:flex-col lg:flex-col">
 									<Image
-										src="/Resources/commission pfp.jpg"
+										src="/Resources/commission_pfp.jpg"
 										width={256}
 										height={256}
 										className="w-1/3 h-1/3 my-auto mx-auto md:m-auto"
