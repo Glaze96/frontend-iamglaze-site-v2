@@ -110,9 +110,9 @@ const Home: NextPage = () => {
 								<Image src="/Logo/RECT LOGO_svg.svg" fill alt="logo" />
 							</div>
 							<div className="flex flex-col">
-								<div className="flex flex-auto m-auto text-lg gap-8 flex-col md:flex-row sm-phone:flex-col sm-phone:gap-2 place-content-center flex-wrap">
+								<div className="self-center mx-auto text-center">
 									<Button.Link
-										label="Commission my work"
+										label="Interested in commissions?"
 										url="/commission"
 										sameTab
 									/>
@@ -360,20 +360,23 @@ const Home: NextPage = () => {
 									both listening to it and creating it. I generally have an easy
 									time picking up and learning new software. I have a wonderful
 									girlfriend, a couple of awesome dogs and an amazing family.
-									<br />
-									<br />
-									Contact me at: itmeglaze@gmail.com
 								</p>
 								<div>
 									<Image src={glazePicture} alt="profile picture" />
 								</div>
 							</div>
+							<div className="text-center mx-auto">
+                <p className="text-lg">Do you like what I do?</p>
+								<Button.Link
+									label="I'm taking Commissions"
+									url="/commission"
+									sameTab
+								/>
+							</div>
 						</div>
 					</Layout>
 				</div>
 			</main>
-			<div></div>
-
 			<footer></footer>
 		</div>
 	);

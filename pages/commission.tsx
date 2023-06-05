@@ -36,18 +36,18 @@ const CommissionPage: NextPage = () => {
 					</div>
 				</div>
 				<div className="w-full h-auto sm-phone:h-full">
-					<div className="w-full md:w-1/2 m-auto h-auto flex flex-col md:flex-col lg:flex-row">
-						<div className="w-auto h-full p-2">
+					<div className="w-full md:w-3/4 m-auto h-auto flex flex-col justify-center md:flex-col lg:flex-row">
+						<div className="w-auto lg:w-1/3 md:w-auto h-full p-2">
 							<h1 className="text-lg">Me</h1>
 							<div className="bg-black flex flex-col p-4 h-full w-auto">
-								<div className="flex flex-col p-2 md:flex-col lg:flex-row">
-										<Image
-											src="/Resources/commission pfp.jpg"
-											width={128}
-											height={128}
-											className="w-1/2 h-1/2 my-auto mx-auto md:m-auto"
-											alt="glaze profile picture"
-										/>
+								<div className="flex flex-col p-2 md:flex-col lg:flex-col">
+									<Image
+										src="/Resources/commission pfp.jpg"
+										width={256}
+										height={256}
+										className="w-1/3 h-1/3 my-auto mx-auto md:m-auto"
+										alt="glaze profile picture"
+									/>
 									<div className="sm-phone:px-0 md:px-4 py-4 text-lg text-center">
 										<h2>Hey! Are you looking for a creative 3D artist?</h2>
 									</div>
@@ -67,29 +67,29 @@ const CommissionPage: NextPage = () => {
 						<div className="w-auto h-full m-2">
 							<h1 className="text-lg">Portfolio</h1>
 							<div className="bg-black w-full h-full">
-                <div className="md:p-4 flex flex-col md:flex-row justify-center">
-                  <div className="mx-auto p-2">
-                    <h1 className="text-lg text-center">Artstation</h1>
-                    <SimpleImageButton
-                      alt="artstation portfolio"
-                      linkUrl="https://www.artstation.com/glaze"
-                      imageUrl="/Resources/Portfolio_AS.jpg"
-                      width={256}
-                      height={256}
-                    />
-                  </div>
-                  <div className="mx-auto p-2">
-                    <h1 className="text-lg text-center">Instagram</h1>
-                    <SimpleImageButton
-                      alt="instagram portfolio"
-                      linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
-                      imageUrl="/Resources/Portfolio_IG.jpg"
-                      width={256}
-                      height={256}
-                    />
-                  </div>
-                </div>
-              </div>
+								<div className="md:p-4 flex flex-col md:flex-row justify-center">
+									<div className="mx-auto p-2">
+										<h1 className="text-lg text-center">Artstation</h1>
+										<SimpleImageButton
+											alt="artstation portfolio"
+											linkUrl="https://www.artstation.com/glaze"
+											imageUrl="/Resources/Portfolio_AS.jpg"
+											width={256}
+											height={256}
+										/>
+									</div>
+									<div className="mx-auto p-2">
+										<h1 className="text-lg text-center">Instagram</h1>
+										<SimpleImageButton
+											alt="instagram portfolio"
+											linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
+											imageUrl="/Resources/Portfolio_IG.jpg"
+											width={256}
+											height={256}
+										/>
+									</div>
+								</div>
+							</div>
 							<div className="bg-black w-full h-full text-center p-4 my-4">
 								<h1 className="text-lg mx-auto text-center">Contact Me!</h1>
 								<p>Name: Rasmus R.</p>
