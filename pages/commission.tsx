@@ -5,6 +5,7 @@ import Layout from "../components/Layout/Layout";
 import Button from "../components/Misc/button";
 import ImageButton from "../components/ImageButton";
 import SimpleImageButton from "../components/SimpleImageButton";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const CommissionPage: NextPage = () => {
 	return (
@@ -69,7 +70,11 @@ const CommissionPage: NextPage = () => {
 							<div className="bg-black w-full h-full">
 								<div className="md:p-4 flex flex-col md:flex-row justify-center">
 									<div className="mx-auto p-2">
-										<h1 className="text-lg text-center">Artstation</h1>
+										<Button.Link
+											label="Artstation"
+											url="https://www.artstation.com/glaze"
+											icon={<HiOutlineExternalLink />}
+										/>
 										<SimpleImageButton
 											alt="artstation portfolio"
 											linkUrl="https://www.artstation.com/glaze"
@@ -79,7 +84,11 @@ const CommissionPage: NextPage = () => {
 										/>
 									</div>
 									<div className="mx-auto p-2">
-										<h1 className="text-lg text-center">Instagram</h1>
+										<Button.Link
+											label="Instagram"
+											url="https://www.instagram.com/i_am_the_real_glaze/"
+											icon={<HiOutlineExternalLink />}
+										/>
 										<SimpleImageButton
 											alt="instagram portfolio"
 											linkUrl="https://www.instagram.com/i_am_the_real_glaze/"

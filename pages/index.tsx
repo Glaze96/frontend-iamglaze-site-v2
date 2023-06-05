@@ -28,6 +28,7 @@ import {
 } from "react-icons/si";
 
 import { FaArrowCircleUp } from "react-icons/fa";
+import SimpleImageButton from "../components/SimpleImageButton";
 
 const scrollToRef = (ref: any) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -154,52 +155,48 @@ const Home: NextPage = () => {
 						</div>
 					</div>
 				</Layout>
-				<Layout>
-					<div
-						id="#art"
-						ref={artSectionRef}
-						className="flex flex-col h-fit z-10"
-					>
-						<SectionDivider label="ART" />
-						<div className="h-screen hidden md:block sm-phone:hidden">
-							<div className="absolute w-3/4 h-3/4">
-								<ImageButton
-									label="2D: Instagram"
-									imageUrl="Resources/2d.jpg"
-									linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
-									textPos="top"
-									cPath="polygon(100% 0, 0 0, 0 100%)"
-									zInd={2}
-									alt="instagram image"
-								/>
-							</div>
-							<div className="absolute w-3/4 h-3/4">
-								<ImageButton
-									label="3D: ArtStation"
-									imageUrl="Resources/3d.jpg"
-									linkUrl="https://www.artstation.com/glaze"
-									textPos="bottom"
-									cPath="polygon(100% 0, 0% 100%, 100% 100%)"
-									zInd={1}
-									alt="artstation image"
-								/>
-							</div>
-						</div>
-						<div className="md:hidden flex flex-col gap-4 py-4 sm-phone:block sm-phone:px-20">
-							<Button.Link
-								label="Instagram"
-								url="https://www.instagram.com/i_am_the_real_glaze/"
-								icon={<HiOutlineExternalLink />}
-							/>
-							<Button.Link
-								label="Art Station"
-								url="https://www.artstation.com/glaze"
-								icon={<HiOutlineExternalLink />}
-							/>
-						</div>
-					</div>
-				</Layout>
 				<div className="bg-blackSecondary">
+					<Layout>
+						<div
+							id="#art"
+							ref={artSectionRef}
+							className="flex flex-col h-fit z-10 p-10"
+						>
+							<SectionDivider label="ART" />
+							<div className="flex flex-col md:flex-row self-center md:gap-24 py-4 sm-phone:px-20">
+								<div className="mx-auto p-2">
+									<Button.Link
+										label="Artstation"
+										url="https://www.artstation.com/glaze"
+										icon={<HiOutlineExternalLink />}
+									/>
+									<SimpleImageButton
+										alt="artstation portfolio"
+										linkUrl="https://www.artstation.com/glaze"
+										imageUrl="/Resources/Portfolio_AS.jpg"
+										width={256}
+										height={256}
+									/>
+								</div>
+								<div className="mx-auto p-2">
+									<Button.Link
+										label="Instagram"
+										url="https://www.instagram.com/i_am_the_real_glaze/"
+										icon={<HiOutlineExternalLink />}
+									/>
+									<SimpleImageButton
+										alt="instagram portfolio"
+										linkUrl="https://www.instagram.com/i_am_the_real_glaze/"
+										imageUrl="/Resources/Portfolio_IG.jpg"
+										width={256}
+										height={256}
+									/>
+								</div>
+							</div>
+						</div>
+					</Layout>
+				</div>
+				<div className="bg-black">
 					<Layout>
 						<div
 							id="#music"
@@ -215,15 +212,15 @@ const Home: NextPage = () => {
 										<div className="w-40">
 											<Button.Link
 												icon={<HiOutlineExternalLink />}
-												label="Spotify"
-												url="https://open.spotify.com/artist/6gAx05BlEJQcHp7mMVi3eM"
+												label="Youtube"
+												url="https://www.youtube.com/channel/UCXh8mqVGRwUhQvT5ZZG-w0g"
 											/>
 										</div>
 										<div className="w-40">
 											<Button.Link
 												icon={<HiOutlineExternalLink />}
-												label="Youtube"
-												url="https://www.youtube.com/channel/UCXh8mqVGRwUhQvT5ZZG-w0g"
+												label="Spotify"
+												url="https://open.spotify.com/artist/6gAx05BlEJQcHp7mMVi3eM"
 											/>
 										</div>
 									</div>
@@ -237,15 +234,15 @@ const Home: NextPage = () => {
 										<div className="w-40">
 											<Button.Link
 												icon={<HiOutlineExternalLink />}
-												label="Website"
-												url="http://www.innermixmusic.com/"
+												label="Youtube"
+												url="https://www.youtube.com/channel/UCtbHyCDGZA6pmNVEKWjORdg"
 											/>
 										</div>
 										<div className="w-40">
 											<Button.Link
 												icon={<HiOutlineExternalLink />}
-												label="Youtube"
-												url="https://www.youtube.com/channel/UCtbHyCDGZA6pmNVEKWjORdg"
+												label="Website"
+												url="http://www.innermixmusic.com/"
 											/>
 										</div>
 									</div>
@@ -254,97 +251,103 @@ const Home: NextPage = () => {
 						</div>
 					</Layout>
 				</div>
-				<Layout>
-					<div
-						id="#programming"
-						ref={programmingSectionRef}
-						className="flex flex-col"
-					>
-						<SectionDivider label="PROGRAMMING" />
-						<div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
-							<div className="w-full h-full">
-								<h2 className="text-lg md:text-xl">Technologies</h2>
-								<div>
-									<h3 className="text-lg p-5">Web</h3>
-									<div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-										<Icon.Hover
-											label="React"
-											icon={<SiReact />}
-											size="text-xl"
-										/>
-										<Icon.Hover
-											label="Next.js"
-											icon={<SiNextdotjs />}
-											size="text-xl"
-										/>
-										<Icon.Hover
-											label="TypeScript"
-											icon={<SiTypescript />}
-											size="text-xl"
-										/>
-										<Icon.Hover
-											label="Styled"
-											icon={<SiStyledcomponents />}
-											size="text-xl"
-										/>
+				<div className="bg-blackSecondary">
+					<Layout>
+						<div
+							id="#programming"
+							ref={programmingSectionRef}
+							className="flex flex-col"
+						>
+							<SectionDivider label="PROGRAMMING" />
+							<div className="flex flex-col md:flex-row py-10 md:py-20 gap-8 md:mx-auto w-full md:w-2/3 sm-phone:flex-col">
+								<div className="w-full h-full">
+									<h2 className="text-lg md:text-xl">Technologies</h2>
+									<div>
+										<h3 className="text-lg p-5">Web</h3>
+										<div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
+											<Icon.Hover
+												label="React"
+												icon={<SiReact />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="Next.js"
+												icon={<SiNextdotjs />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="TypeScript"
+												icon={<SiTypescript />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="Styled"
+												icon={<SiStyledcomponents />}
+												size="text-xl"
+											/>
+										</div>
+									</div>
+									<div>
+										<h3 className="text-lg p-5">Languages</h3>
+										<div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
+											<Icon.Hover
+												label="Javascript"
+												icon={<SiJavascript />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="C++"
+												icon={<SiCplusplus />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="C#"
+												icon={<SiCsharp />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="Python"
+												icon={<SiPython />}
+												size="text-xl"
+											/>
+										</div>
+									</div>
+									<div>
+										<h3 className="text-lg p-5">Other</h3>
+										<div className="flex flex-row w-fit gap-5 md:p-5">
+											<Icon.Hover
+												label="Unity"
+												icon={<SiUnity />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="Github"
+												icon={<SiGithub />}
+												size="text-xl"
+											/>
+											<Icon.Hover
+												label="Figma"
+												icon={<SiFigma />}
+												size="text-xl"
+											/>
+										</div>
 									</div>
 								</div>
-								<div>
-									<h3 className="text-lg p-5">Languages</h3>
-									<div className="flex flex-grow flex-row w-fit gap-5 md:p-5">
-										<Icon.Hover
-											label="Javascript"
-											icon={<SiJavascript />}
-											size="text-xl"
-										/>
-										<Icon.Hover
-											label="C++"
-											icon={<SiCplusplus />}
-											size="text-xl"
-										/>
-										<Icon.Hover label="C#" icon={<SiCsharp />} size="text-xl" />
-										<Icon.Hover
-											label="Python"
-											icon={<SiPython />}
-											size="text-xl"
-										/>
-									</div>
-								</div>
-								<div>
-									<h3 className="text-lg p-5">Other</h3>
-									<div className="flex flex-row w-fit gap-5 md:p-5">
-										<Icon.Hover
-											label="Unity"
-											icon={<SiUnity />}
-											size="text-xl"
-										/>
-										<Icon.Hover
+								<div className="w-full">
+									<h2 className="text-lg md:text-xl">Links</h2>
+									<div className="w-60 p-5">
+										<Button.Link
 											label="Github"
-											icon={<SiGithub />}
-											size="text-xl"
-										/>
-										<Icon.Hover
-											label="Figma"
-											icon={<SiFigma />}
-											size="text-xl"
+											url="https://github.com/Glaze96/"
+											icon={<HiOutlineExternalLink />}
 										/>
 									</div>
-								</div>
-							</div>
-							<div className="w-full">
-								<h2 className="text-lg md:text-xl">Links</h2>
-								<div className="w-60 p-5">
-									<Button.Link
-										label="Github"
-										url="https://github.com/Glaze96/"
-										icon={<HiOutlineExternalLink />}
-									/>
 								</div>
 							</div>
 						</div>
-					</div>
-				</Layout>
-				<div id="#about" className="bg-blackSecondary">
+					</Layout>
+				</div>
+				<div id="#about" className="bg-black">
 					<Layout>
 						<div
 							ref={aboutSectionRef}
@@ -365,8 +368,8 @@ const Home: NextPage = () => {
 									<Image src={glazePicture} alt="profile picture" />
 								</div>
 							</div>
-							<div className="text-center mx-auto">
-                <p className="text-lg">Do you like what I do?</p>
+							<div className="text-center mx-auto py-10">
+								<p className="text-lg">Do you like what I do?</p>
 								<Button.Link
 									label="I'm taking Commissions"
 									url="/commission"
