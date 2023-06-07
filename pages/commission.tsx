@@ -103,7 +103,7 @@ const CommissionPage: NextPage = () => {
 								<h1 className="text-lg mx-auto text-center">Contact Me!</h1>
 								<p>Name: Rasmus R.</p>
 								<p>Email: itmeglaze@gmail.com</p>
-								<p>Discord: Glaze#7394</p>
+								<p>Discord: iamglaze</p>
 								<p>(let me know you came from this site)</p>
 							</div>
 						</div>
