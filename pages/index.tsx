@@ -111,13 +111,13 @@ const Home: NextPage = () => {
 								<Image src="/Logo/RECT LOGO_svg.svg" fill alt="logo" />
 							</div>
 							<div className="flex flex-col">
-								<div className="self-center mx-auto text-center">
+								{/* <div className="self-center mx-auto text-center">
 									<Button.Link
 										label="Interested in commissions?"
 										url="/commission"
 										sameTab
 									/>
-								</div>
+								</div> */}
 								<h2 className="m-auto text-lg md:text-xl text-center p-6 font-bold sm-phone:text-lg sm-phone:p-2">
 									CHECK OUT:
 								</h2>
@@ -368,14 +368,14 @@ const Home: NextPage = () => {
 									<Image src={glazePicture} alt="profile picture" />
 								</div>
 							</div>
-							<div className="text-center mx-auto py-10">
+							{/* <div className="text-center mx-auto py-10">
 								<p className="text-lg">Do you like what I do?</p>
 								<Button.Link
 									label="I'm taking Commissions"
 									url="/commission"
 									sameTab
 								/>
-							</div>
+							</div> */}
 						</div>
 					</Layout>
 				</div>
